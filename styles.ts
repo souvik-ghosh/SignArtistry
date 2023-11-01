@@ -32,4 +32,13 @@ export const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
   },
+  buttonItem: {
+    backgroundColor: 'black',
+    padding: 7,
+    marginTop: 20,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 200,
+  },
 });
