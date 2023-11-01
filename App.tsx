@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Sign from './signature';
 
 interface Point {
   x: number;
@@ -74,8 +75,13 @@ function App(): JSX.Element {
           />
         ))}
       </View>
+      <Sign text="new library" onOK={handleSignature} />
     </SafeAreaView>
   );
+
+  function handleSignature(signature: string) {
+    console.log('Signature', signature);
+  }
 }
 
 export default App;
