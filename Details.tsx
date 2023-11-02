@@ -13,7 +13,7 @@ const Details = (props: propsType) => {
       <TouchableOpacity style={styles.buttonItem} onPress={handleButtonPress}>
         <Text style={styles.buttonText}>Signature Canvas</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonItem} onPress={handleButtonPress}>
+      <TouchableOpacity style={styles.buttonItem} onPress={handleButton}>
         <Text style={styles.buttonText}>PanResponder</Text>
       </TouchableOpacity>
     </View>
@@ -21,6 +21,10 @@ const Details = (props: propsType) => {
 
   function handleButtonPress() {
     navigation.navigate('SignatureCanvas');
+  }
+
+  function handleButton() {
+    navigation.navigate('SignatureCapture');
   }
 };
 

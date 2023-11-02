@@ -62,4 +62,17 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
   },
+  box: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  signatureContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  signatureCanvas: {
+    backgroundColor: 'white',
+    borderWidth: 1,
+  },
 });
