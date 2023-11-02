@@ -1,12 +1,18 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 import Sign from './signature';
 import {styles} from './styles';
 
-const SigantureCanvas = () => {
+const SignatureCanvas = () => {
   return (
-    <View style={styles.container}>
-      <Sign text="new library" onOK={handleSignature} />
+    <View style={styles.sign}>
+      <Sign text="Sign Above" onOK={handleSignature} />
+      <View style={styles.wrapper}>
+        <Text>
+          <Text style={styles.bold}>react-native-signature-canvas: </Text>
+          <Text>Popular, recently updated, and actively maintained.</Text>
+        </Text>
+      </View>
     </View>
   );
 
@@ -15,4 +21,4 @@ const SigantureCanvas = () => {
   }
 };
 
-export default SigantureCanvas;
+export default SignatureCanvas;

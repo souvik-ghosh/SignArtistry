@@ -1,5 +1,4 @@
-import React, {useRef, useState} from 'react';
-import {View, Modal, TouchableOpacity, Text} from 'react-native';
+import React, {useRef} from 'react';
 import SignatureScreen, {SignatureViewRef} from 'react-native-signature-canvas';
 
 interface Props {
@@ -7,11 +6,9 @@ interface Props {
   onOK: (signature: string) => void;
 }
 
-const Sign: React.FC<Props> = ({text, onOK}) => {
+const Sign = (props: Props) => {
+  const {text, onOK} = props;
   const ref = useRef<SignatureViewRef>(null);
-  const [show, setShow] = useState(false);
-
-  const showSignature = () => setShow(true);
 
   const handleSignature = (signature: string) => {
     console.log(signature);
@@ -20,7 +17,6 @@ const Sign: React.FC<Props> = ({text, onOK}) => {
 
   const handleClear = () => {
     console.log('clear success!');
-    setShow(false);
   };
 
   const handleEmpty = () => {
@@ -32,24 +28,15 @@ const Sign: React.FC<Props> = ({text, onOK}) => {
   };
 
   return (
-    <View>
-      <TouchableOpacity onPress={showSignature}>
-        <Text>Show signature view</Text>
-      </TouchableOpacity>
-      {show && (
-        <Modal>
-          <SignatureScreen
-            ref={ref}
-            onEnd={handleEnd}
-            onOK={handleSignature}
-            onEmpty={handleEmpty}
-            onClear={handleClear}
-            autoClear={false}
-            descriptionText={text}
-          />
-        </Modal>
-      )}
-    </View>
+    <SignatureScreen
+      ref={ref}
+      onEnd={handleEnd}
+      onOK={handleSignature}
+      onEmpty={handleEmpty}
+      onClear={handleClear}
+      autoClear={false}
+      descriptionText={text}
+    />
   );
 };
 

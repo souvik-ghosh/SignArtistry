@@ -41,4 +41,25 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     width: 200,
   },
+  details: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  wrapper: {
+    backgroundColor: 'white',
+    flex: 0.5,
+    padding: 15,
+  },
+  bold: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  sign: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
+  },
 });

@@ -3,14 +3,14 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './home';
 import Details from './details';
-import SigantureCanvas from './signatureCanvas';
+import SignatureCanvas from './signatureCanvas';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-type RootStackParamList = {
+export type RootStackParamList = {
   Home: undefined;
   Details: undefined;
-  SigantureCanvas: undefined;
+  SignatureCanvas: undefined;
 };
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           options={{headerShown: false}}
         />
         <Stack.Screen name="Details" component={Details} />
-        <Stack.Screen name="SigantureCanvas" component={SigantureCanvas} />
+        <Stack.Screen name="SignatureCanvas" component={SignatureCanvas} />
       </Stack.Navigator>
     </NavigationContainer>
   );
