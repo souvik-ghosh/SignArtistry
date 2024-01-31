@@ -16,6 +16,12 @@ const Details = (props: propsType) => {
       <TouchableOpacity style={styles.buttonItem} onPress={handleButton}>
         <Text style={styles.buttonText}>PanResponder</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.buttonItem} onPress={handleVoiceRecorder}>
+        <Text style={styles.buttonText}>Voice Recorder</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.buttonItem} onPress={handleAudio}>
+        <Text style={styles.buttonText}>Audio live stream</Text>
+      </TouchableOpacity>
     </View>
   );
 
@@ -25,6 +31,14 @@ const Details = (props: propsType) => {
 
   function handleButton() {
     navigation.navigate('SignatureCapture');
+  }
+
+  function handleVoiceRecorder() {
+    navigation.navigate('VoiceRecorderPlayer');
+  }
+
+  function handleAudio() {
+    navigation.navigate('AudioLiveStream');
   }
 };
 
